@@ -1,0 +1,26 @@
+<section class="container mt-3">
+    <h2 class="text-center">Nuestros Usuarios</h2>
+    <hr class="border border-4 border-success">
+    <br>
+    <div class="row g-3 justify-content-center">
+        @for (usuario of misUsuarios | paginate: { itemsPerPage: pageSize, currentPage: page }; track usuario._id){
+            <article class="col-12 col-md-6 col-lg-4">
+               <app-usuario-card [miUsuario]= "usuario"></app-usuario-card>
+            </article>
+        }
+        @empty {
+           <p>No hay Usuarios</p> 
+        }
+    </div>
+    <br>
+    <br>
+      <!-- Controles de paginación -->
+    <div class="d-flex justify-content-center mt-3">
+        <pagination-controls (pageChange)="page = $event"  previousLabel="Anterior"
+        nextLabel="Siguiente"
+        screenReaderPaginationLabel="Paginación de usuarios"
+        screenReaderPageLabel="Página"
+        screenReaderCurrentLabel="Página actual">
+        </pagination-controls>
+    </div>
+</section>

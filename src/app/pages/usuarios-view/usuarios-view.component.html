@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="card shadow border-2 border text-center p-3">
+        <div class="row align-items-center">
+            <aside class="col-md-4 text-center border-end border-4 border-success">
+              <img [src]="miUsuario.image"  height="175px"  class="card-img-top rounded-circle mt-3 mx-auto" alt="Foto del usuario">
+            </aside>
+              <div class="col-md-8">
+                <h4>{{miUsuario.first_name}}</h4>
+                <br>
+                <h5>{{miUsuario.last_name}}</h5>
+                <br>
+                <p><strong>Nombre Usuario:  </strong> {{miUsuario.username}}</p>
+                <p><strong>Email:  </strong>{{miUsuario.email}}</p>
+    
+              <div class="d-flex justify-content-center mt-3">
+                <!--Añadimos el componente de los botones para cuando le das a ver detalles-->
+                <app-botones [parent]="'view'" [_id] ="miUsuario._id" [miUsuario]="miUsuario"></app-botones>
+              </div>
+              </div>
+        </div>
+    </div>
+</div>
