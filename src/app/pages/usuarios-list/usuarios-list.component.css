@@ -1,9 +1,0 @@
-.container {
-    min-height: 100vh; /* Hace que el contenedor tenga al menos el alto de la pantalla */
-    padding-bottom: 50px; /* Espacio extra para evitar cortes */
-  }
-  h2{
-    font-family: lato;
-    color:rgb(22, 100, 73);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
